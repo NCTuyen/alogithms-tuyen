@@ -10,17 +10,21 @@ var listProduct = [
     {name : 'Case', price: 120, quality: 28, categoryId: 5}	   			
 ];
 
-function sortByPrice(listProduct) {
-    var size = listProduct.length;
-    for (var i = 0; i < size; i++) {
-        for (var x = i+1; x < size; x++) {
-            if (listProduct[i].price > listProduct[x].price) {
-                var tmp = listProduct[i];
-                listProduct[i] = listProduct [x];
-                listProduct[x] = tmp;
+var listCategory = [	
+    {id: 1, name : 'Comuter'},
+    {id: 2, name : 'Memory'},
+    {id: 3, name : 'Card'},
+    {id: 4, name : 'Acsesory'},
+]
+
+function mapProductByCategory() {
+    listProduct.forEach ((product) => {
+        listCategory.forEach ((category) => {
+            if (category.id === product.categoryId) {
+                product.push(category)
             }
-        }
-    }
-    return listProduct;
+        })
+    })
+    console.log(product);
 }
-// console.log (sortByPrice(listProduct))
+mapProductByCategory()

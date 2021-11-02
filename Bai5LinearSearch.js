@@ -11,12 +11,12 @@ var listProduct = [
 ];
 
 function findProductByCategory (listProduct, categoryId) {
-    var prd5 = [];
+    var resultprd = [];
     listProduct.forEach((product) => {
         if (product.categoryId == categoryId) {
-            prd5.push (product)
+            resultprd.push (product)
         }
     });
-    return prd5;
+    return resultprd;
 }
-console.log (findProductByCategory (listProduct, 2))
+// console.log (findProductByCategory (listProduct, 2))

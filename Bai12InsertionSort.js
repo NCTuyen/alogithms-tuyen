@@ -23,4 +23,4 @@ function sortByName(listProduct) {
     }
     return listProduct;
 }
-console.log (sortByName(listProduct))
+// console.log (sortByName(listProduct))

@@ -10,12 +10,10 @@ var listProduct = [
     {name : 'Case', price: 120, quality: 28, categoryId: 5}	   			
 ];
 function findProduct (listProduct, nameProduct)	{
-    var prd = "";
-    listProduct.forEach((product) => {
-        if (product.name == nameProduct) {
-            prd = product;
+    for (i= 0 ; i< listProduct.length; i++) {
+        if (listProduct[i].name == nameProduct) {
+            return listProduct[i];
         }
-    });
-    return prd;
+    }
 }
-console.log (findProduct (listProduct, "Main"))
+// console.log(findProduct (listProduct, "Main"));

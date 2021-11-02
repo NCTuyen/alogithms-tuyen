@@ -11,12 +11,12 @@ var listProduct = [
 ];
 
 function findProductByPrice(listProduct, price) {
-    var prd6 = [];
+    var result = [];
     listProduct.forEach((product) => {
         if (product.price <= price) {
-            prd6.push (product.name)
+            result.push (product.name)
         }
     });
-    return prd6;
+    return result;
 }
-console.log (findProductByPrice(listProduct, 300))
+// console.log (findProductByPrice(listProduct, 300))
