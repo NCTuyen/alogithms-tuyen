@@ -17,14 +17,25 @@ var listCategory = [
     {id: 4, name : 'Acsesory'},
 ]
 
+// function mapProductByCategory() {
+//     listProduct.map((e)=> {
+//         let temp = listCategory.find(el => el.id === e.categoryId)
+//         if (temp.name) {
+//             e.categoryName =  temp.name;
+//         }
+//     })
+//     console.log(listProduct);
+// }
+// mapProductByCategory();
+
 function mapProductByCategory() {
-    listProduct.forEach ((product) => {
-        listCategory.forEach ((category) => {
-            if (category.id === product.categoryId) {
-                product.push(category)
+    for(var i = 0; i<listProduct.length; i++){
+        for(var x= 0; x<listCategory.length;x++){
+            if(listCategory[x].id === listProduct[i].categoryId) {
+                listProduct[i].categoryName = listCategory[x].name;
             }
-        })
-    })
-    console.log(product);
+        }
+    }
+    // console.log(listProduct);
 }
 mapProductByCategory()
