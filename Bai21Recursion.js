@@ -1,22 +1,22 @@
-var salary = 1000;
-function calSalary(n) {
-    if (n>1) {
-        salary +=salary*0.1;
-        calSalary(n-1);
+
+function calSalary(salary,n) {
+    if(n <= 1 ){
+        return salary;
     }
+    return calSalary(salary,n-1) + 0.1 *  calSalary(salary,n-1) 
 }
-calSalary(3);
-// console.log(salary);
+
+// console.log(calSalary(1000,3));
 
 
 
 
 
-function calSalaryFor(n) {
-    var salary =  1000;
+
+function calSalaryFor(salary2,n) {
     for(let i = 2;i<=n;i++) {
-        salary+= salary*0.1;
+        salary2+= salary2*0.1;
     }
-    console.log(salary);
+    return salary2;
 }
-// calSalaryFor(2)
+// calSalaryFor(1000,2)

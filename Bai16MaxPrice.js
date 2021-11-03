@@ -33,6 +33,6 @@ function maxPrice2() {
             maxPriceProduct = listProduct[i]
         }
     }
-    // console.log(maxPriceProduct);
+    return maxPriceProduct;
 }
 maxPrice2()
